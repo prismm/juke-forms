@@ -20,6 +20,7 @@ export default function NewPlayList (props){
 			      <div className="form-group">
 			        <div className="col-xs-10 col-xs-offset-2">
 			          <button type="submit" className="btn btn-success" disabled={props.isDisabled}>Create Playlist</button>
+								<div className="alert alert-warning" hidden={props.isHidden} >Please enter a name between 1 and 16 characters</div>
 			        </div>
 			      </div>
 			    </fieldset>
