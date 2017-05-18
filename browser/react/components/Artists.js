@@ -6,18 +6,18 @@ export default class Artists extends Component {
   constructor(props){
     super(props);
 
-    this.state = {filteredArtists: this.props.filteredArtists}
+    this.state = {childFilteredArtists: this.props.filteredArtists}
+
   }
   
   componentWillReceiveProps(nextProps){
-    if (this.props.filteredArtists.length !== nextProps.filteredArtists.length) { //FIX THIS IF STATEMENT!
-      console.log('ARE WE IN HEREE????????')
-      this.setState({filteredArtists: nextProps.filteredArtists});
+    if (this.state.childFilteredArtists.length !== nextProps.filteredArtists.length) { 
+      this.setState({childFilteredArtists: nextProps.filteredArtists});
     }
   }
 
   render() {
-    const artists = this.props.filteredArtists;
+    const artists = this.state.childFilteredArtists;
 
     return (
       <div>
